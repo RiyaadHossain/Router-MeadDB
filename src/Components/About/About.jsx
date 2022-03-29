@@ -1,10 +1,9 @@
 import React from 'react';
+import './About.css'
 
 const About = () => {
     return (
-        <div>
-            
-        </div>
+        <h1 className='about-text'>We Have the Best Food Quality of the World 🥩</h1>
     );
 };
 
