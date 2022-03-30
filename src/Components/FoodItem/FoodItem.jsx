@@ -10,7 +10,7 @@ const FoodItem = ({ food }) => {
   const { strArea, idMeal, strMeal, strMealThumb, strTags, strYoutube } = food;
   return (
     <Col>
-      <Card>
+      <Card className="shadow food-item">
         <Card.Img variant="top" src={strMealThumb} />
         <Card.Body>
           <Card.Title>{strMeal}</Card.Title>

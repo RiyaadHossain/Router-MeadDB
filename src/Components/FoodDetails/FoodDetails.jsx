@@ -12,14 +12,13 @@ const FoodDetails = () => {
       .then((res) => res.json())
       .then((json) => setSingleItem(json.meals[0]));
   }, [foodId]);
-  console.log(singleItem);
   return (
     <div>
       <Container>
         <Card className="my-5 mx-auto" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={singleItem?.strMealThumb} />
           <Card.Body>
-                      <Card.Title>{ singleItem.strMeal}</Card.Title>
+                      <Card.Title><h2>{ singleItem.strMeal}</h2></Card.Title>
             <Card.Text>
               <strong>Instructions: </strong>{singleItem.strInstructions}
             </Card.Text>
