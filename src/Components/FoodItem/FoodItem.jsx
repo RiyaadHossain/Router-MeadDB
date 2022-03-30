@@ -4,10 +4,10 @@ import "./FoodItem.css";
 import { FcGlobe } from "react-icons/fc";
 import { FaTags } from "react-icons/fa";
 import { BsFillPlayCircleFill } from "react-icons/bs";
-import { SiIfood } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const FoodItem = ({ food }) => {
-  const { strArea, strMeal, strMealThumb, strTags, strYoutube } = food;
+  const { strArea, idMeal, strMeal, strMealThumb, strTags, strYoutube } = food;
   return (
     <Col>
       <Card>
@@ -23,14 +23,16 @@ const FoodItem = ({ food }) => {
             </p>
           </Card.Text>
         </Card.Body>
-              <div className="flex">
-              <a href={strYoutube} className="w-50 btn btn-primary">
-              <BsFillPlayCircleFill />
-            </a>
-            <Button variant="success" className="w-50">
-              <SiIfood />
+        <div className="flex">
+          <a href={strYoutube} className="w-50 btn btn-primary">
+            <BsFillPlayCircleFill />
+          </a>
+          <Link to={`/foodrecipe/${idMeal}`}>
+            <Button variant="success" className="w-50 fw-bold">
+              Instruction
             </Button>
-           </div>
+          </Link>
+        </div>
       </Card>
     </Col>
   );
