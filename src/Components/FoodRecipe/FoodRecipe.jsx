@@ -34,9 +34,9 @@ const FoodRecipe = () => {
           </Button>
         </InputGroup>
         <Row xs={1} md={2} lg={3} className="g-4">
-          {foods.map((food) => (
-            <FoodItem key={food.idMeal} food={food} />
-          ))}
+          {foods
+            ? foods.map((food) => <FoodItem key={food.idMeal} food={food} />)
+            : "Nothing Here 🙄"}
         </Row>
       </Container>
     </div>
